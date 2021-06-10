@@ -1,9 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import Child from "./child";
+import { Provider } from "./context";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
+      <Provider value={{ info: "传给child的数据啊" }}>
+        <div>
+          <Child />
+        </div>
+      </Provider>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
